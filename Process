@@ -1,0 +1,7 @@
+1. Create a page and an app.
+2. Configure the app.
+4. Create & host php file.
+5. Run the server and get the public url of the page
+6. Setup and verify the webhook
+7. Subscribe the App to the Page running  curl -ik -X POST https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=[APP GENERATED TOKEN HERE]
+8. Test the Bot
