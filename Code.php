@@ -1,9 +1,7 @@
-Code:
-
 <?php
 // parameters
-$hubVerifyToken = 'USERCREATEDTOKEN';
-$accessToken = "APP GENERATED TOKEN";
+$hubVerifyToken = '12345ABCD';
+$accessToken = "xxx";
 
 // Check token at Setup
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
@@ -18,13 +16,21 @@ $senderID = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
-$answer = "Cannot get answer to your keyword. Type 'hi' instead.";
+$answer = "I cannot get an answer to your keyword. Type 'hi' instead. :) ";
 
 if($messageText == "hi") {
-    $answer = "Hello User Welcome \n Keyword(s): Today";
+    $answer = "Hello dear, Welcome. I'm just a Facebook bot built to answer queries. Make your request!";
 }
-if($messageText == "today") {
-    $answer = "Success in your exams";
+if($messageText == "pray for me") {
+    $answer = "Success in your exams, dear";
+}
+
+if($messageText == "amen thanks") {
+    $answer = "Anytime dear";
+}
+
+if($messageText == "bye") {
+    $answer = "Yeah, thanks for reaching out. Bye! :* ";
 }
 
 $response = [
